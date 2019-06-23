@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   rolify
-  devise :database_authenticatable
+  devise :ldap_authenticatable
 
   after_create :assign_admin_role
   after_create :assign_default_role
